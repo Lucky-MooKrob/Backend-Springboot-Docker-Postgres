@@ -1,5 +1,6 @@
 package com.example.postgres.springpostgresdocker;
 
+import com.example.postgres.springpostgresdocker.model.Employee;
 import com.example.postgres.springpostgresdocker.model.Insurance;
 import com.example.postgres.springpostgresdocker.repository.InsuranceRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -45,6 +46,9 @@ public class InsuranceController {
         Insurance insurance = insuranceRepository.findById(insuranceId)
                 .orElseThrow(() -> new ResouceNotFoundException("Insurance not found for this id :: " + insuranceId));
         insurance.setName(insuranceDetails.getName());
+        insurance.setInsuranceid(insuranceDetails.getInsuranceid());
+        insurance.setDetail(insuranceDetails.getDetail());
+        insurance.setPrice(insuranceDetails.getPrice());
         final Insurance updatedInsurance = insuranceRepository.save(insurance);
         return ResponseEntity.ok(updatedInsurance);
     }
