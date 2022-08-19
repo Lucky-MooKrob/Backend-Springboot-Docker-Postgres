@@ -1,6 +1,6 @@
 package com.example.postgres.springpostgresdocker;
 
-import com.example.postgres.springpostgresdocker.model.Employee;
+//import com.example.postgres.springpostgresdocker.model.Employee;
 import com.example.postgres.springpostgresdocker.model.Insurance;
 import com.example.postgres.springpostgresdocker.repository.InsuranceRepository;
 import org.springframework.beans.factory.annotation.Autowired;
