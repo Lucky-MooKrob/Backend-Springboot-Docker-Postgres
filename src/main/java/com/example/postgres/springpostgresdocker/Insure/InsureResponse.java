@@ -16,5 +16,5 @@ public class InsureResponse {
     String pic;
     Long minAge;
     Long maxAge;
-    List<BulletResponse> bullets;
+    List<String> bullets;
 }

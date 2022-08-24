@@ -1,4 +1,4 @@
-package com.example.postgres.springpostgresdocker.type;
+package com.example.postgres.springpostgresdocker.compare;
 
 
 import lombok.AccessLevel;
@@ -11,9 +11,9 @@ import javax.persistence.*;
 @Getter
 @Setter
 @Entity
-@Table(name = "type_insure")
+@Table(name = "compare")
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class TypeEntity {
+public class CompareEntity {
 
     @Id
     @Column
@@ -24,9 +24,24 @@ public class TypeEntity {
     Long insureId;
 
     @Column
-    Long typeId;
+    Long compareId;
 
     @Column
-    String name;
+    String ageCoverage;
+
+    @Column
+    String dailyCom;
+
+    @Column
+    String ipdRoom;
+
+    @Column
+    String opdCoverage;
+
+    @Column
+    String maxCoverage;
+
+    @Column
+    Long taxBenefit;
 
 }
